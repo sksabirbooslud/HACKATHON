@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejecutar programa Python</title>
+</head>
+<body>
+    <h1>Programa Python en HTML</h1>
+    <button onclick="runPython()">Ejecutar Python</button>
+    <script>
+        function runPython() {
+            fetch('http://localhost:5000/')
+                .then(response => response.text())
+                .then(data => {
+                    console.log(data);
+                    alert(data);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</body>
+</html>
